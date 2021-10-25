@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div>
+    <h2>Proceso de Reportes y Filtos de la Empresa Control Documentos & CO </h2>
+    <br />
+    <p>
+        En esta parte nuestra emprese le presenta opciones para generar o filtras unas series de atributos o propiedades 
+        de los demas procesos, Tales como Empleados, Departamentos, Generacion de Secuencia etc..
+    </p>
+    <br />
+    <table style="width: 100%">
+        <tr>
+            <td>
+                <a href="@Url.Action("Index", "ReporteEmpleados")" class="btn btn-primary"> <i class="glyphicon glyphicon-hand-up"></i> Reportes Empleados</a>
+                <br />
+                <p>
+                    Reporte de Todos los <br />
+                    Empleados
+                </p>
+            </td>
+
+            <td>
+                <a href="@Url.Action("Index", "ReporteDepatamentos")" class="btn btn-primary"> <i class="glyphicon glyphicon-hand-up"></i> Reportes Departamentos</a>
+                <br />
+                <p>
+                    Reporte de Todos los <br />
+                    Departamentos
+                </p>
+            </td> 
+            <td>
+                <a href="@Url.Action("Index", "ReportesDocumentos")" class="btn btn-primary"> <i class="glyphicon glyphicon-hand-up"></i> Reportes Documentos</a>
+                <br />
+                <p>
+                    Reporte de Todos los <br />
+                    Documentos
+                </p>
+            </td>
+            <td>
+                <a href="@Url.Action("Index", "ReporteSecuencia")" class="btn btn-primary"> <i class="glyphicon glyphicon-hand-up"></i> Reportes Rango Fecha Documentos</a>
+                <br />
+                <p>
+                    Reporte de Todos los <br />
+                    Documentos Por rango 
+                    de Fecha
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>

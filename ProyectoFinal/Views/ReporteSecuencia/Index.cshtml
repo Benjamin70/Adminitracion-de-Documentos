@@ -1,0 +1,77 @@
+﻿@model IEnumerable<Capa_Entidad.GeneracionSecuencia>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<form action="/ReporteSecuencia/Buscar" method="post">
+    <p>
+        <h4 class="col-md-10">
+            Fecha Inicio
+            <input type="date" name="fecha_Incio" class="form-control" />
+        </h4>
+        <h4 class="col-md-10">
+            Fecha Fin
+            <input type="date" name="fecha_Fin" class="form-control" />
+            <br />
+            <input type="submit" name="Buscar" value="Buscar" class="btn btn-primary" />
+        </h4>
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                <label>Identificador Secuencia</label>
+            </th>
+            <th>
+                <label>Identificador Empleado</label>
+            </th>
+            <th>
+                <label>Siglas-DPTO</label>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Destino)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Secuencia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Incio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_Fin)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id_Secuencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmpleadoID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SiglasDpto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destino)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Secuencia)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Incio)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_Fin)
+                </td>
+            </tr>
+        }
+
+    </table>
+</form>

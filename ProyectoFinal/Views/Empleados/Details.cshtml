@@ -1,0 +1,65 @@
+﻿@model Capa_Entidad.Empleados
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del Empleado</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Identificador Empelado</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Emp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cargo)
+        </dd>
+
+        <dt>
+            <label>Identificador Departamento</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartamentoID)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Editar", "Empleados", new { id = Model.Id_Emp})"><i class="glyphicon glyphicon-edit"></i> Editar</a>
+    <a class="btn btn-primary" href="@Url.Action("Index","Empleados")"><i class="glyphicon glyphicon-menu-left"></i> Regresar al Listado</a>
+</p>

@@ -1,0 +1,41 @@
+﻿@model Capa_Entidad.Departamentos
+
+@{
+    ViewBag.Title = "GetDepartamento";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles del Departamento</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Id_Dpto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Dpto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Siglas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Siglas)
+        </dd>
+    </dl>
+</div>
+<p>
+    <a class="btn btn-primary" href="@Url.Action("Editar", "Departamentos",new { id = Model.Id_Dpto })"><i class="glyphicon glyphicon-edit"></i> Editar</a>
+    <a class="btn btn-primary" href="@Url.Action("Index", "Departamentos")"><i class="glyphicon glyphicon-menu-left"></i> Regresar al Listado</a>
+</p>

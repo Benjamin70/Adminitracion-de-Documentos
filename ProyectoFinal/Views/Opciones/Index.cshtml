@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div>
+    <center>
+        <h2>Procesos</h2>
+    </center>
+    <p>
+        La Empresa Contro Documentos & CO es una empresa que se encarga del manejo de documentos, Especificamente crear o generar Secuencias que
+        identifiquen cada uno de esos documentos, Tambien nuestra empresa cuenta con un modulo de procesos los cuales siguen una secuencia.
+        Los procesos de nuestra emppresas son: Registros de Empleados, Registro de Departamentos, Generacion de Secuencia Y Los Reportes.
+    </p>
+    <br />
+    <table style="width: 107%">
+        <tr>
+            <td>
+                <div>
+                    <h4>Registro de Empleados</h4>
+                    <img src="~/Imagenes/RegistroU.png" alt="Alternate Text" onclick="location.href='/Empleados/Index'" width="280" height="280" />
+                    <br />
+                    <p>
+                        En este proceso el cliente tendra la <br />
+                        oportunidad de registrar los empleados de <br />
+                        la empresa.
+                    </p>
+                    <input type="submit" onclick="location.href='/Empleados/Index'" value="Empleados" class="btn btn-primary" />
+                </div>
+            </td>
+            <td>
+                <div>
+                    <h4>Registro de Departamentos</h4>
+                    <img src="~/Imagenes/departamentosE.jpg" alt="Alternate Text" onclick="location.href='/Departamento/Index'" width="280" height="280" />
+                    <br />
+                    <p>
+                        En este proceso el cliente tendra la<br />
+                        oportunidad de registrar los departamentos <br />
+                        de la empresa.
+                    </p>
+                    <input type="submit" value="Departamentos" class="btn btn-primary" onclick="location.href='/Departamentos/Index'" />
+                </div>
+            </td>
+            <td>
+                <h4>Generacion de Codigo</h4>
+                <img src="~/Imagenes/Codigo.jpg" alt="Alternate Text" onclick="location.href='/Secuencia/Index'" width="280" height="280" />
+                <br />
+                <p>
+                    En este proceso el cliente tendra la<br />
+                    oportunidad de generar los codigos que <br />
+                    identifcar el documento de la empresa.
+                </p>
+                <input type="submit" value="Codigo"  onclick="location.href='/Secuencia/Index'"class="btn btn-primary" />
+            </td>
+            <td>
+                <h4>Registro de Departamentos</h4>
+                <img src="~/Imagenes/Reportes.jpg" alt="Alternate Text" onclick="location.href='/OpcionesReportes/Index'" width="280" height="280" />
+                <br />
+                <p>
+                    En este proceso el cliente tendra la<br />
+                    oportunidad de generar los reportes de <br />
+                    cada proceso de la empresa.
+                </p>
+                <input type="submit" value="Reportes" onclick="location.href='/OpcioneReportes/Index'" class="btn btn-primary" />
+            </td>
+
+        </tr>
+    </table>
+</div>
+

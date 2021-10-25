@@ -1,0 +1,79 @@
+﻿@model Capa_Entidad.GeneracionSecuencia
+
+@{
+    ViewBag.Title = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>¿Desea Eliminar Esta Secuencia?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            <label>Identificador Secuencia</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id_Secuencia)
+        </dd>
+
+        <dt>
+            <label>Identificador Empleado</label>
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmpleadoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SiglasDpto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SiglasDpto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destino)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destino)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secuencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secuencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Incio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Incio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_Fin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_Fin)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Eliminar", "Secuencia")) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-danger" />
+            <a href="@Url.Action("Index","Secuencia")" class="btn btn-primary"><i class="glyphicon glyphicon-menu-left"></i> Regresar al Listados</a>
+        </div>
+     }
+</div>
